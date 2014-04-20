@@ -28,5 +28,6 @@ __END__
   <%= @alcohol %>
 </p>
 <p>
-(<a href="http://faranginbangkok.com/2013/01/24/alcohol-in-thailand-when-you-can-buy-where-you-can-buy-when-you-can-drink-where-you-can-drink/">Info</a>. Not taking into account Buddhist holidays or election days.)
+Not taking into account Buddhist holidays or election days.<br>
+(<a href="http://faranginbangkok.com/2013/01/24/alcohol-in-thailand-when-you-can-buy-where-you-can-buy-when-you-can-drink-where-you-can-drink/">Info</a> / <a href="https://github.com/citizen428/alcoholinthailand">Code</a>)
 </p>
