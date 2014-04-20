@@ -1,0 +1,6 @@
+.powrc
+tmp/*
+dump/*
+.env
+log
+.bundle/
