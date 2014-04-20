@@ -1,7 +1,8 @@
 require 'sinatra'
 
 get '/' do
-  @alcohol = [*11..14, *17..23].include?(Time.now.hour).getlocal("+07:00") ? 'YES' : 'NO'
+  now = Time.now.hour.getlocal("+07:00")
+  @alcohol = [*11..14, *17..23].include?(now) ? 'YES' : 'NO'
   erb :index
 end
 
