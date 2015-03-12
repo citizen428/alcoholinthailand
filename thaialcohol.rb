@@ -1,8 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  now = Time.now.getlocal("+07:00").hour
-  @alcohol = [*11..14, *17..23].include?(now) ? 'YES' : 'NO'
+  @alcohol = [*11..13, *17..23].include?(Time.now.getlocal("+07:00").hour)
   erb :index
 end
 
@@ -25,9 +24,10 @@ __END__
 
 @@ index
 <p style="font-size:10em;font-weight:bold">
-  <%= @alcohol %>
+  <%= @alcohol ? 'YES' : 'NO' %>
 </p>
 <p>
-Not taking into account Buddhist holidays or election days.<br>
+You can buy alcohol from 11:00-14:00 and 17:00-24:00,
+not taking into account Buddhist holidays or election days.<br>
 (<a href="http://faranginbangkok.com/2013/01/24/alcohol-in-thailand-when-you-can-buy-where-you-can-buy-when-you-can-drink-where-you-can-drink/">Info</a> / <a href="https://github.com/citizen428/alcoholinthailand">Code</a>)
 </p>
